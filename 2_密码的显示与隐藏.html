@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码的显示与隐藏</title>
+</head>
+<body>
+        <input type="password" >
+        <button>显示密码</button>
+</body>
+<script>
+        var btn = document.querySelector('button')
+        var input = document.querySelector('input')
+        var flag = 0 //设置一个变量 控制显示与隐藏
+        btn.onclick = function(){
+            if(flag == 0){
+                  input.type = 'text'
+                  btn.innerText = '隐藏密码'
+                  flag = 1
+            }else{
+                input.type = 'password'
+                btn.innerText = '显示密码'
+                flag = 0
+            }
+          
+        }
+</script>
+</html>

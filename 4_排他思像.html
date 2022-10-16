@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排他思想</title>
+</head>
+<body>
+     <button>1</button>
+     <button>2</button>
+     <button>3</button>
+     <button>4</button>
+     <button>5</button>
+     <button>6</button>
+     <script>
+        var btn = document.querySelectorAll('button')
+        //给每一个按钮添加点击事件,就用循环
+        btn.forEach(v=>{
+            v.onclick = function(){
+                //在我点击之前 先把所有按钮的颜色取消
+                btn.forEach(v=>{
+                    v.style.backgroundColor = ''
+                })
+                //然后给自己添加颜色
+               v.style.backgroundColor = 'red'
+            }
+        })
+     </script>
+</body>
+</html>

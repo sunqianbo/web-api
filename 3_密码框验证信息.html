@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码框验证信息</title>
+</head>
+<body>
+      <input type="password">
+      <p>请输入6~16位密码</p>
+</body>
+<script>
+     var input = document.querySelector('input')
+     var p = document.querySelector('p')
+     input.onblur = function(){
+        if(input.value.length < 6 || input.value.length > 16){
+              p.innerText = '输入的密码不正确'
+        }else{
+             p.innerText = '输入的密码正确'
+        }
+     }
+</script>
+</html>
